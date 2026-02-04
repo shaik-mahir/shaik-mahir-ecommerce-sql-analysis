@@ -73,8 +73,6 @@ CREATE TABLE zepto (
 );
 ```
 
----
-
 ## 📥 Data Import
 
 The dataset was imported into PostgreSQL using pgAdmin CSV import and the COPY command.
@@ -94,7 +92,6 @@ WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 - Fixed UTF-8 encoding issues by saving CSV file in UTF-8 format
 - Checked for missing values and data inconsistencies after import
 
----
 
 ### 3️⃣ 🔍 Exploratory Data Analysis
 - Counted total records
