@@ -73,25 +73,20 @@ CREATE TABLE zepto (
 );
 ```
 
-## 📥 Data Import
+---
 
-The dataset was imported into PostgreSQL using pgAdmin CSV import and the COPY command.
-
-### Import Method
-- Imported CSV file into PostgreSQL table using pgAdmin
-- Ensured proper column mapping during import
-- Verified data after loading into the database
-
-### SQL Import Command
+### 2️⃣ Data Import
+```sql
 \copy zepto(category,name,mrp,discountPercent,availableQuantity,
 discountedSellingPrice,weightInGms,outOfStock,quantity)
 FROM 'data/zepto_v2.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
+```
 
-### Data Preparation
-- Fixed UTF-8 encoding issues by saving CSV file in UTF-8 format
-- Checked for missing values and data inconsistencies after import
+- Imported dataset using pgAdmin CSV import  
+- Fixed UTF-8 encoding issues by saving CSV in UTF-8 format  
 
+---
 
 ### 3️⃣ 🔍 Exploratory Data Analysis
 - Counted total records
